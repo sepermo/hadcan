@@ -1,0 +1,149 @@
+@font-face{
+    font-family: cuerpo;
+    src:url(../FONTS/Roboto-Regular.ttf) ;
+}
+
+/*variables*/
+:root{
+    --color-uno : #fed363;
+    --color-dos : #e4a326;
+    --color-tres : #59a9a5; 
+    --color-cuatro : #4d2e2b; 
+    --color-cinco : #181b2e; 
+    --color-seis : #adadad; 
+
+    --fuente-cuerpo : cuerpo;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente-cuerpo);
+}
+
+body{
+    background: linear-gradient(120deg, var(--color-dos), var(--color-cuatro) );
+    height: 100vh;
+    overflow: hidden;
+}
+
+.imagenLogin img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+
+.container{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background: whitesmoke;
+    max-width: 1440px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    width: 450px;
+}
+
+.container form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .txt{
+    position: relative;
+    border-bottom: 2px solid var(--color-seis);
+    margin: 30px 0;
+}
+
+.txt input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txt label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: var(--color-seis);
+    transform: translateY(-50%);
+    font-size: 20px;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.txt span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--color-cuatro);
+    transition: .3s;
+}
+
+.txt input:focus ~ label,
+.txt input:valid ~ label{
+    top: .5px;
+    color: var(--color-cuatro);
+}
+
+.txt input:focus ~ span::before,
+.txt input:valid ~ label::before{
+    width: 100%;
+}
+
+.txtSubmit{
+    text-align: center;
+}
+
+input[type="submit"]{
+    width: 60%;
+    height: 50px;
+    background: var(--color-dos);
+    border-radius: 25px;
+    border: 1px solid;
+    font-size: 18px;
+    color: var(--color-cuatro);
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    transition: .3s;
+
+}
+
+input[type="submit"]:hover{
+    background: var(--color-cuatro);
+    color: var(--color-dos);
+    transition: .3s;
+}
+
+.clicLink{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #666666;
+}
+
+.clicLink p{
+    margin: 10px 0;
+}
+
+.clicLink a{
+    margin: 10px 0;
+    color: #2691d9;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.clicLink a:hover{
+    text-decoration: underline;
+    transition: .3s;
+}
